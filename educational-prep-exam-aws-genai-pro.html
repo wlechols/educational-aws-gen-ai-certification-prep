@@ -98,7 +98,7 @@
             <div class="options">
                 <div class="option" data-option="A" onclick="selectOption(1, 'A')">
                     <div class="option-content"><span class="option-letter">A)</span><span class="option-text">Deploy a SageMaker Asynchronous Inference endpoint that uses an accelerated computing SageMaker AI instance type. Create an AWS Lambda function for on-demand invocation of the SageMaker AI endpoint to manage image generation.</span></div>
-                    <div class="justification hidden incorrect-just"><strong>Incorrect</strong> - While Asynchronous Inference supports large payloads and GPU instances, it is designed for long-running inference jobs with results delivered to S3. For on-demand user requests requiring immediate responses, Real-Time Inference is more appropriate.</div>
+                    <div class="justification hidden correct-just"><strong>Incorrect</strong> - While Asynchronous Inference supports large payloads and GPU instances, it is designed for long-running inference jobs with results delivered to S3. For on-demand user requests requiring immediate responses, Real-Time Inference is more appropriate.</div>
                 </div>
                 <div class="option" data-option="B" onclick="selectOption(1, 'B')">
                     <div class="option-content"><span class="option-letter">B)</span><span class="option-text">Deploy a SageMaker Serverless Inference endpoint that uses a general purpose SageMaker AI instance type. Create an AWS Lambda function for on-demand invocation of the SageMaker AI endpoint to manage image generation.</span></div>
@@ -106,7 +106,7 @@
                 </div>
                 <div class="option" data-option="C" onclick="selectOption(1, 'C')">
                     <div class="option-content"><span class="option-letter">C)</span><span class="option-text">Deploy a SageMaker Real-Time Inference endpoint that uses an accelerated computing SageMaker AI instance type. Create an AWS Lambda function for on-demand invocation of the SageMaker AI endpoint to manage image generation.</span></div>
-                    <div class="justification hidden correct-just"><strong>Correct</strong> - Real-Time Inference endpoints support GPU instances (accelerated computing) for image generation. For on-demand user requests with response times under 15 minutes, Real-Time Inference with GPU instances is the most appropriate choice. The Lambda function can orchestrate the requests.</div>
+                    <div class="justification hidden incorrect-just"><strong>Correct</strong> - Real-Time Inference endpoints support GPU instances (accelerated computing) for image generation. For on-demand user requests with response times under 15 minutes, Real-Time Inference with GPU instances is the most appropriate choice. The Lambda function can orchestrate the requests.</div>
                 </div>
                 <div class="option" data-option="D" onclick="selectOption(1, 'D')">
                     <div class="option-content"><span class="option-letter">D)</span><span class="option-text">Create a SageMaker AI batch transform job that uses an accelerated computing SageMaker AI instance type to manage image generation. Create an AWS Lambda function to start the batch transform job.</span></div>
